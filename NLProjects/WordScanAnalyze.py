@@ -14,6 +14,7 @@ from tkinter import filedialog, messagebox
 import requests
 import re
 import traceback
+import numpy as np
 from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 app = FastAPI()
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
@@ -49,7 +50,7 @@ async def train_model(file: UploadFile = File(...)):
         if df['Yorum'].isnull().any():
             raise HTTPException(status_code=400, detail="Veri setinde boş cümleler var. Lütfen kontrol edin.")
         
-        df['label'] = 0.0  # Burada uygun etiketleri ayarlayın
+        df['label'] = 0.0  
         train_df = df.sample(frac=0.8, random_state=42)
         eval_df = df.drop(train_df.index)
         train_dataset = Dataset.from_pandas(train_df[['Yorum', 'label']])
@@ -85,7 +86,7 @@ async def train_model(file: UploadFile = File(...)):
             args=training_args,
             train_dataset=tokenized_train_datasets,
             eval_dataset=tokenized_eval_datasets,
-            compute_metrics=compute_metrics  # Bu satırı ekleyin
+            compute_metrics=compute_metrics 
         )
         
         trainer.train()
@@ -101,13 +102,9 @@ async def train_model(file: UploadFile = File(...)):
 @app.post("/analyze")
 async def analyze_sentiment(file: UploadFile = File(...)):
     try:
-        df = pd.read_csv(file.file)  # CSV dosyasını oku
-
-        # Eksik sıra numaralarını tamamla
+        df = pd.read_csv(file.file) 
         if 'Sıra No' in df.columns:
             df['Sıra No'] = range(1, len(df) + 1)
-        
-        # Boş cümleleri kontrol et
         if df['Yorum'].isnull().any():
             raise HTTPException(status_code=400, detail="Dosyada boş cümleler var. Lütfen kontrol edin.")
         
@@ -115,7 +112,7 @@ async def analyze_sentiment(file: UploadFile = File(...)):
         results = []
         
         for yorum in yorumlar:
-            words = re.findall(r'\b\w+\b', yorum)  # Kelimeleri ayır
+            words = re.findall(r'\b\w+\b', yorum) 
             for word in words:
                 inputs = tokenizer(word, return_tensors="pt", truncation=True, padding=True, max_length=128)
                 outputs = model(**inputs)
@@ -136,7 +133,7 @@ async def analyze_sentiment(file: UploadFile = File(...)):
 @app.post("/predict/")
 async def predict(item: Item):
     text = item.text
-    words = re.findall(r'\b\w+\b', text)  # Kelimeleri ayır
+    words = re.findall(r'\b\w+\b', text) 
     results = []
 
     for word in words:
@@ -172,10 +169,10 @@ async def predict_form():
         <style>
             body {
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                background-image: url('/static/background.webp'); /* Resmin yolu buraya */
-                background-size: cover; /* Resmin tüm arka planı kaplamasını sağlar */
-                background-position: center; /* Resmin ortalanmasını sağlar */
-                background-repeat: no-repeat; /* Resmin tekrar etmemesini sağlar */
+                background-image: url('/static/background.webp');
+                background-size: cover;
+                background-position: center; 
+                background-repeat: no-repeat; 
                 margin: 0;
                 padding: 0;
                 display: flex;
@@ -215,7 +212,7 @@ async def predict_form():
                 border-radius: 4px;
                 font-size: 16px;
                 box-sizing: border-box;
-                resize: vertical; /* Kullanıcı sadece dikey yönde boyutlandırabilir */
+                resize: vertical; 
             }
             input[type="button"] {
                 width: 100%;
@@ -238,11 +235,11 @@ async def predict_form():
                 border-radius: 4px;
                 margin-top: 20px;
                 max-height: 300px;
-                overflow-y: auto; /* İçeriğin taşmasını kaydırma çubuğu ile gösterir */
+                overflow-y: auto; 
             }
             .output pre {
                 margin: 0;
-                white-space: pre-wrap; /* Satır sonlarını korur */
+                white-space: pre-wrap; 
             }
         </style>
     </head>
@@ -318,10 +315,6 @@ def start_tkinter():
     sentiment_button.pack(pady=10)
     
     root.mainloop()
-
-# FastAPI'yi farklı bir iş parçacığında çalıştır
 api_thread = threading.Thread(target=run_fastapi)
 api_thread.start()
-
-# Tkinter arayüzünü başlat
 start_tkinter()
