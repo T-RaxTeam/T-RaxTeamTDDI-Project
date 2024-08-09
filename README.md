@@ -17,6 +17,10 @@ X isimli sitede yer alan müşteri yorumlarını analiz ederek, ürünler hakkı
 -Sonuçların Analizi : Modelin yorumları doğru bir şekilde sınıflandırıp sınıflandıramadığının incelenmesi.  
 -Uygulama ve Entegrasyon : Modelin canlı sistemde kullanılması ve test edilmesi.  
 
+## Veri Seti
+Veri seti, Hepsiburada'dan alınan müşteri yorumlarından oluşmaktadır. Veri seti, temizlenmiş ve önceden etiketlenmiş yorumlardan oluşmaktadır. Veriler, Excel formatında depolanarak hızlı erişim ve işlemeye uygun hale getirilmiştir. Ayrıca
+T-Rax Team Hepsiburada Yorum Çekici Sistemi İle de Veri setini geliştirmiş bulunmaktayız.
+
 
 
 
