@@ -46,6 +46,10 @@ Gelecekte, modelin daha büyük veri setleri üzerinde eğitilmesi ve farklı b�
 
 **Bülent Karaatlı** - **Danışman**
 
+----------------------------------------------------------------------------------------------------------
+
+**Yarışmaya Katılacak Arkadaşlara Başarılar Dileriz.**
+
 
 
 
