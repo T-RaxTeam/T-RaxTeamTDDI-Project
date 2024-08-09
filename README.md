@@ -4,7 +4,7 @@
 
 * Veri kazıma işleminde kullandığımız kodumuz ise : https://github.com/T-RaxTeam/T-RaxTeamWebScrapping
 
-##P rojemzizin Amacı:  
+## Projemzizin Amacı:  
 X isimli sitede yer alan müşteri yorumlarını analiz ederek, ürünler hakkında detaylı duygu analizi yapmayı amaçlıyoruz. Bu proje, müşteri geri bildirimlerini otomatik olarak sınıflandırarak, işletmelerin ürün ve hizmetlerini iyileştirmelerine yardımcı olmayı hedeflemektedir.
 
 ## Projedeki İş Akışı: 
