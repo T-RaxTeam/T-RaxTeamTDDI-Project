@@ -33,6 +33,22 @@ Proje kapsamında elde edilen bulgular, modelin yüksek doğruluk oranı ile mü
 ## PROJE YOL HARİTASI
 Gelecekte, modelin daha büyük veri setleri üzerinde eğitilmesi ve farklı büyük şirket platformlarına uygulanması planlanmaktadır. Ayrıca, modelin duygu analizine ek olarak, öneri sistemleri ve müşteri profilleme gibi ek özellikler eklenmesi düşünülmektedir. Modelimizi geliştirmek istemekteyiz.
 
+----------------------------------------------------------------------------------------------------------
+## TAKIM ÜYELERİ VE GÖREV DAĞILIMLARI
+
+**Hüseyin Can Biçer** : Veri Seti ve Veri Tabanı Hazırlama - **Kaptan**  
+
+**Arif Dalyan** : Yazılım ve Geliştirme - **Kaptan Yardımcısı**  
+
+**Hüseyin Özdemir** : Makine Öğrenimi - **Üye**
+
+**Remzi Efe Karakuş** : Yapay Zeka Geliştirme - **Üye**
+
+**Bülent Karaatlı** - **Danışman**
+
+
+
+
 
 
 
