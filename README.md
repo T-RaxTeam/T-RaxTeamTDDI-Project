@@ -21,6 +21,11 @@ X isimli sitede yer alan müşteri yorumlarını analiz ederek, ürünler hakkı
 Veri seti, Hepsiburada'dan alınan müşteri yorumlarından oluşmaktadır. Veri seti, temizlenmiş ve önceden etiketlenmiş yorumlardan oluşmaktadır. Veriler, Excel formatında depolanarak hızlı erişim ve işlemeye uygun hale getirilmiştir. Ayrıca
 T-Rax Team Hepsiburada Yorum Çekici Sistemi İle de Veri setini geliştirmiş bulunmaktayız.
 
+## YÖNTEM VE TEKNİKLER
+Proje, BERT (Bidirectional Encoder Representations from Transformers) modeli kullanılarak gerçekleştirilmiştir. Doğal dil işleme teknikleri arasında tokenizasyon, lemmatizasyon ve sentiment analizi yer almaktadır.
+![image](https://github.com/user-attachments/assets/f3617f85-eaed-4827-9d4e-998364ecbd7b)
+
+
 
 
 
