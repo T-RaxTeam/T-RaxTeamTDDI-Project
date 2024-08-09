@@ -32,7 +32,7 @@ async def log_requests(request: Request, call_next):
     return response
 
 # Modellerin ve tokenizerların yüklenmesi
-sentiment_model_name = "mesutaktas/TurkishNERModel"
+sentiment_model_name = "savasy/bert-base-turkish-sentiment-cased"
 ner_model_name = "savasy/bert-base-turkish-ner-cased"
 
 sentiment_tokenizer = BertTokenizer.from_pretrained(sentiment_model_name)
