@@ -24,7 +24,22 @@ T-Rax Team Hepsiburada Yorum Çekici Sistemi İle de Veri setini geliştirmiş b
 ## YÖNTEM VE TEKNİKLER
 Proje, BERT (Bidirectional Encoder Representations from Transformers) modeli kullanılarak gerçekleştirilmiştir. Doğal dil işleme teknikleri arasında tokenizasyon, lemmatizasyon ve sentiment analizi yer almaktadır.
 
-## 
+## MODEL EĞİTİMİ VE DEĞERLENDİRME
+Model, yorumları beş duygu kategorisine ayıracak şekilde eğitilmiştir. Eğitim sırasında GPU kullanılarak hızlandırma sağlanmıştır. Modelin performansı, doğruluk, precision, recall ve F1-score metrikleri ile değerlendirilmiştir
+
+## SONUÇLAR
+Proje kapsamında elde edilen bulgular, modelin yüksek doğruluk oranı ile müşteri yorumlarını doğru bir şekilde sınıflandırabildiğini göstermiştir. İşletmeler, bu analizler sayesinde müşteri memnuniyetsizliklerini hızlı bir şekilde tespit edebilir ve gerekli önlemleri alabilir.
+
+## PROJE YOL HARİTASI
+Gelecekte, modelin daha büyük veri setleri üzerinde eğitilmesi ve farklı büyük şirket platformlarına uygulanması planlanmaktadır. Ayrıca, modelin duygu analizine ek olarak, öneri sistemleri ve müşteri profilleme gibi ek özellikler eklenmesi düşünülmektedir. Modelimizi geliştirmek istemekteyiz.
+
+
+
+
+
+
+
+
 
 
 
