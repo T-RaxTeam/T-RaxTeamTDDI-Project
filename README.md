@@ -4,4 +4,6 @@
 
 * Veri kazıma işleminde kullandığımız kodumuz ise : https://github.com/T-RaxTeam/T-RaxTeamWebScrapping
 
+**Projemzizin Amacı:**
+
 
